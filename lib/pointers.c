@@ -31,6 +31,21 @@ int bubble_sort(int *collection, int count)
 
 void insertion_sort(int *collection, int count)
 {
+    for(int i = 0; i < count; i++)
+    {
+        int position = i;
+        int temp = collection[i];
+        while((position > 0) && (temp < collection[position-1]))
+        {
+            int *ptr1 = &collection[position];
+            int *ptr2 = &collection[position-1];
+            *ptr1 = *ptr2;
+            //collection[position] = collection[position-1];
+            position --;
+        }
+        collection[position] = temp;
+    }
+    show_Array(collection,count);
 
 }
 
