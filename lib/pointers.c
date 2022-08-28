@@ -62,7 +62,16 @@ void reverse(int *collection, int count)
 
 int calulate_frequency(int *collection, int count, int target)
 {
-  return 0;
+    int frequency = 0;
+    for (int i = 0; i < count;i++)
+    {
+        int *ptr_1 = &target;
+        int *ptr_2 = &collection[i];
+        if(*ptr_1 == *ptr_2){
+            frequency = frequency + 1;
+        }
+    }
+    return frequency;
 }
 void show_Array(int array[], int size)
 {
