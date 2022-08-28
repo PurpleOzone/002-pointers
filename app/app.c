@@ -10,7 +10,7 @@ int main(void)
     show_Array(no_order_vector,sizeof(no_order_vector)/sizeof(no_order_vector[0]) );
 
     //Metodo de inserción
-    
+
 
     return 0;
 }
