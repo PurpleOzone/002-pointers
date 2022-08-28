@@ -10,9 +10,20 @@ int main(void)
     printf("%d intercambios para ordenar el arreglo con el metodo de burbuja.\n",changes);
     show_Array(no_order_vector,sizeof(no_order_vector)/sizeof(no_order_vector[0]) );
     */
+
     //Metodo de inserción
-    insertion_sort(vector_ptr,sizeof(no_order_vector)/sizeof(no_order_vector[0]));
+
+    /*
+   insertion_sort(vector_ptr,sizeof(no_order_vector)/sizeof(no_order_vector[0]));
+   printf("\n Observamos el cambio en el arreglo original\n");
+   show_Array(no_order_vector, 7);
+    */
+
+   //Método reverse
+    reverse(vector_ptr,sizeof(no_order_vector)/sizeof(no_order_vector[0]));
     printf("\n Observamos el cambio en el arreglo original\n");
     show_Array(no_order_vector, 7);
-    return 0;
+   return 0;
+
+
 }
