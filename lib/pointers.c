@@ -12,15 +12,12 @@ int bubble_sort(int *collection, int count)
     {
         for(int j = 0; j < count -1 -i; j ++)
         {
-            if (collection[j] > (collection[j+1]))
+            if (*(collection + j) > *(collection + j + 1))
             {
-                int *ptr_a = &collection[j];
-                int *ptr_b = &collection[j+1];
-
-                int temp = *ptr_b;
-                *ptr_b = *ptr_a;
-                *ptr_a = temp;
-                contador ++;
+             int aux = *(collection + j + 1);
+             *(collection + j+ 1) = *(collection + j);
+             *(collection+ j ) = aux;
+             contador ++;
             }
 
         }
@@ -75,6 +72,6 @@ void show_Array(int *array, int size)
 {
     for (int i = 0; i < size; i++)
     {
-        printf("%d \t",*(array+i));
+        printf("%d \t",*(array + i ));
     }
 }
