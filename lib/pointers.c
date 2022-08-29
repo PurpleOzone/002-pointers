@@ -34,15 +34,14 @@ void insertion_sort(int *collection, int count)
     for(int i = 0; i < count; i++)
     {
         int position = i;
-        int temp = (collection[i]);
-        while((position > 0) && (temp < collection[position-1]))
+        int temp = *(collection + i);
+
+        while((position > 0) && (temp < *(collection + position - 1)))
         {
-            int *ptr1 = &collection[position];
-            int *ptr2 = &collection[position-1];
-            *ptr1 = *ptr2;
+            *(collection + position) =  *(collection + position - 1);
             position --;
         }
-        collection[position] = temp;
+        *(collection + position) = temp;
     }
     show_Array(collection,count);
 
@@ -63,13 +62,14 @@ void reverse(int *collection, int count)
 int calulate_frequency(int *collection, int count, int target)
 {
     int frequency = 0;
-    for (int i = 0; i < count;i++)
+    for (int i = 0; i < count; i++)
     {
-        int *ptr_1 = &target;
-        int *ptr_2 = &collection[i];
-        if(*ptr_1 == *ptr_2){
-            frequency = frequency + 1;
+        if(*(collection + i) == target)
+
+        {
+            frequency++;
         }
+
     }
     return frequency;
 }

@@ -1,5 +1,6 @@
 //
 // Created by Josean Camarena on 07/07/22.
+// Implemented by: $Héctor Aguilar Gómez$
 //
 
 #ifndef POINTERS_H
