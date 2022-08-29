@@ -51,10 +51,9 @@ void reverse(int *collection, int count)
 {
     for (int i = 0; i < count/2; i++)
     {
-        int temp = collection[i];
-        int *ptr_1 = &collection[count -i - 1];
-        collection[i] = *ptr_1;
-        collection[count - i - 1] = temp;
+        int temp = *(collection + i);
+        *(collection + i) = *(collection + count -i -1);
+        *(collection + count - i- 1) = temp;
     }
     show_Array(collection,count);
 }
@@ -65,7 +64,6 @@ int calulate_frequency(int *collection, int count, int target)
     for (int i = 0; i < count; i++)
     {
         if(*(collection + i) == target)
-
         {
             frequency++;
         }
@@ -73,10 +71,10 @@ int calulate_frequency(int *collection, int count, int target)
     }
     return frequency;
 }
-void show_Array(int array[], int size)
+void show_Array(int *array, int size)
 {
     for (int i = 0; i < size; i++)
     {
-        printf("%d \t",array[i]);
+        printf("%d \t",*(array+i));
     }
 }

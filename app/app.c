@@ -2,7 +2,7 @@
 #include "pointers.h"
 int main(void)
 {
-    int no_order_vector[7] = {55,55,206,985,989,851,5};
+    int no_order_vector[7] = {25,895,306,985,989,851,5};
     int *vector_ptr = &no_order_vector[0];
 
     //Metodo de burbuja
@@ -14,18 +14,18 @@ int main(void)
     */
    //Metodo de inserción
 
-
+    /*
   insertion_sort(vector_ptr,sizeof(no_order_vector)/sizeof(no_order_vector[0]));
   printf("\n Observamos el cambio en el arreglo original\n");
   show_Array(no_order_vector, 7);
-
+   */
 
   //Método reverse
-   /*
+
  reverse(vector_ptr,sizeof(no_order_vector)/sizeof(no_order_vector[0]));
  printf("\n Observamos el cambio en el arreglo original\n");
- show_Array(no_order_vector, 7);
-   */
+ show_Array(no_order_vector, sizeof(no_order_vector)/sizeof(no_order_vector[0]));
+
 
    //Frequency
     /*
